@@ -12,12 +12,16 @@ a.	How to build the application.
 b.	How to create and run the docker image.
 1) create Dockerfile in the root of project
 2) add tag <finalName>spring-boot-docker</finalName> in pom.xml
-3) add this code in Dockerfile
+3) add this code in Dockerfile :
     FROM openjdk:18
+   
     EXPOSE 8080
+   
     ADD target/spring-boot-docker.jar spring-boot-docker.jar
+   
     ENTRYPOINT ["java", "-jar", "/spring-boot-docker.jar"]
-   -------------------------------------------------------------
+   
+   
 5)write in terminal mvn clean
 6)write in terminal mvn install
 7)create docker image write in terminal docker build -t order-management .
