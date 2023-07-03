@@ -10,9 +10,10 @@ a.	How to build the application.
 
 
 b.	How to create and run the docker image.
+
 1) create Dockerfile in the root of project.
 
-2) add tag: <finalName>spring-boot-docker</finalName> in pom.xml
+2) add tag finalName in pom.xml name is spring-boot-docker
 
 3) add this code in Dockerfile :
     FROM openjdk:18
