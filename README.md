@@ -17,6 +17,7 @@ b.	How to create and run the docker image.
     EXPOSE 8080
     ADD target/spring-boot-docker.jar spring-boot-docker.jar
     ENTRYPOINT ["java", "-jar", "/spring-boot-docker.jar"]
+   -------------------------------------------------------------
 5)write in terminal mvn clean
 6)write in terminal mvn install
 7)create docker image write in terminal docker build -t order-management .
