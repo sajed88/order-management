@@ -23,6 +23,9 @@ b.	How to create and run the docker image.
    
    
 5)write in terminal mvn clean
+
 6)write in terminal mvn install
+
 7)create docker image write in terminal docker build -t order-management .
+
 8)run docker docker write in terminal run -p 8080:8080 order-management java -jar order-management.jar
