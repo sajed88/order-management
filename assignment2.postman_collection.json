@@ -1,0 +1,2057 @@
+{
+	"info": {
+		"_postman_id": "36bbd2dc-f6ac-46ff-a265-ef80da0a3587",
+		"name": "assignment2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26810946"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"sajed\",\r\n  \"username\": \"sajed80\",\r\n  \"email\": \"sajedbaqa@example.com\",\r\n  \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/auth/signup"
+					},
+					"response": [
+						{
+							"name": "signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"sajed\",\r\n  \"username\": \"sajed80\",\r\n  \"email\": \"sajedbaqa@example.com\",\r\n  \"password\": \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/auth/signup"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 09:26:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "User registered successfully"
+						}
+					]
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"usernameOrEmail\": \"sajed80\",\r\n  \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/auth/signin"
+					},
+					"response": [
+						{
+							"name": "signin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"usernameOrEmail\": \"sajed80\",\r\n  \"password\": \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/auth/signin"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 09:29:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q\",\n    \"tokenType\": \"Bearer\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Create Customer",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"firstName\": \"same\",\r\n        \"lastName\": \"ahmad\",\r\n        \"bornAt\": \"2001-03-05\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/customers"
+					},
+					"response": [
+						{
+							"name": "Create Customer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \r\n        \"firstName\": \"same\",\r\n        \"lastName\": \"ahmad\",\r\n        \"bornAt\": \"2001-03-05\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/customers"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 09:32:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"firstName\": \"same\",\n    \"lastName\": \"ahmad\",\n    \"bornAt\": \"2001-03-05\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/customers/"
+					},
+					"response": [
+						{
+							"name": "Get All Customers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/customers/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 09:33:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"John\",\n        \"lastName\": \"Doe\",\n        \"bornAt\": \"1990-01-01\"\n    },\n    {\n        \"id\": 2,\n        \"firstName\": \"Jane\",\n        \"lastName\": \"Smith\",\n        \"bornAt\": \"1995-05-10\"\n    },\n    {\n        \"id\": 3,\n        \"firstName\": \"same\",\n        \"lastName\": \"ahmad\",\n        \"bornAt\": \"2001-03-05\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Customer By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/customers/3"
+					},
+					"response": [
+						{
+							"name": "Get Customer By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/customers/3"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 09:34:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"firstName\": \"same\",\n    \"lastName\": \"ahmad\",\n    \"bornAt\": \"2001-03-05\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Customer By ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"firstName\": \"maher\",\r\n    \"lastName\": \"khaled\",\r\n    \"bornAt\": \"1998-03-05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/customers/1"
+					},
+					"response": [
+						{
+							"name": "Update Customer By ID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"firstName\": \"maher\",\r\n    \"lastName\": \"khaled\",\r\n    \"bornAt\": \"1998-03-05\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/customers/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 09:39:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"firstName\": \"maher\",\n    \"lastName\": \"khaled\",\n    \"bornAt\": \"1998-03-05\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Customer By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8080/api/v1/customers/2"
+					},
+					"response": [
+						{
+							"name": "Delete Customer By ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+										"type": "text"
+									}
+								],
+								"url": "http://localhost:8080/api/v1/customers/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 09:41:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Customer deleted successfully"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 3,\r\n        \"customerId\": 3,\r\n        \"orderedAt\": \"2023-07-29T13:00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/orders"
+					},
+					"response": [
+						{
+							"name": "Create Order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": 3,\r\n        \"customerId\": 3,\r\n        \"orderedAt\": \"2023-07-29T13:00:00\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/orders"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 09:47:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"customerId\": 3,\n    \"orderedAt\": \"2023-07-29T13:00:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/orders"
+					},
+					"response": [
+						{
+							"name": "Get All Orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/orders"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 09:47:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"customerId\": 1,\n        \"orderedAt\": \"2023-06-29T13:00:00\"\n    },\n    {\n        \"id\": 3,\n        \"customerId\": 3,\n        \"orderedAt\": \"2023-07-29T13:00:00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Order By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/orders/3"
+					},
+					"response": [
+						{
+							"name": "Get Order By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/orders/3"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 09:48:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"customerId\": 3,\n    \"orderedAt\": \"2023-07-29T13:00:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Order By ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"customerId\": 3,\r\n    \"orderedAt\": \"2020-02-20T10:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/orders/3"
+					},
+					"response": [
+						{
+							"name": "Update Order By ID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"customerId\": 3,\r\n    \"orderedAt\": \"2020-02-20T10:00:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/orders/3"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 09:50:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"customerId\": 3,\n    \"orderedAt\": \"2020-02-20T10:00:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Order By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:8080/api/v1/orders/1"
+					},
+					"response": [
+						{
+							"name": "Delete Order By ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "http://localhost:8080/api/v1/orders/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 09:51:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Order deleted successfully"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \r\n        \"slug\": \"product-4\",\r\n        \"name\": \"Product 4\",\r\n        \"reference\": \"REF-003\",\r\n        \"price\": 70.00,\r\n        \"vat\": 0.40,\r\n        \"stockable\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/products/"
+					},
+					"response": [
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n       \r\n        \"slug\": \"product-3\",\r\n        \"name\": \"Product 3\",\r\n        \"reference\": \"REF-003\",\r\n        \"price\": 30.00,\r\n        \"vat\": 0.23,\r\n        \"stockable\": true\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/products/"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 10:07:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"slug\": \"product-3\",\n    \"name\": \"Product 3\",\n    \"reference\": \"REF-003\",\n    \"price\": 30,\n    \"vat\": 0.23,\n    \"stockable\": true\n}"
+						},
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n       \r\n        \"slug\": \"product-4\",\r\n        \"name\": \"Product 4\",\r\n        \"reference\": \"REF-003\",\r\n        \"price\": 70.00,\r\n        \"vat\": 0.40,\r\n        \"stockable\": false\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/products/"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 10:24:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"slug\": \"product-4\",\n    \"name\": \"Product 4\",\n    \"reference\": \"REF-003\",\n    \"price\": 70,\n    \"vat\": 0.4,\n    \"stockable\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/products/"
+					},
+					"response": [
+						{
+							"name": "Get All Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/products/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 10:09:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"slug\": \"product-1\",\n        \"name\": \"Product 1\",\n        \"reference\": \"REF-001\",\n        \"price\": 9.99,\n        \"vat\": 0.2,\n        \"stockable\": true\n    },\n    {\n        \"id\": 2,\n        \"slug\": \"product-2\",\n        \"name\": \"Product 2\",\n        \"reference\": \"REF-002\",\n        \"price\": 19.99,\n        \"vat\": 0.2,\n        \"stockable\": true\n    },\n    {\n        \"id\": 3,\n        \"slug\": \"product-3\",\n        \"name\": \"Product 3\",\n        \"reference\": \"REF-003\",\n        \"price\": 30,\n        \"vat\": 0.23,\n        \"stockable\": true\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Product By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/products/3"
+					},
+					"response": [
+						{
+							"name": "Get Product By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/products/3"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 10:10:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"slug\": \"product-3\",\n    \"name\": \"Product 3\",\n    \"reference\": \"REF-003\",\n    \"price\": 30,\n    \"vat\": 0.23,\n    \"stockable\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Product By ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"slug\": \"product-2\",\r\n    \"name\": \"Product 2\",\r\n    \"reference\": \"REF-002\",\r\n    \"price\": 10.99,\r\n    \"vat\": 0.50,\r\n    \"stockable\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/products/2"
+					},
+					"response": [
+						{
+							"name": "Update Product By ID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"slug\": \"product-2\",\r\n    \"name\": \"Product 2\",\r\n    \"reference\": \"REF-002\",\r\n    \"price\": 10.99,\r\n    \"vat\": 0.50,\r\n    \"stockable\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/products/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 10:11:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"slug\": \"product-2\",\n    \"name\": \"Product 2\",\n    \"reference\": \"REF-002\",\n    \"price\": 10.99,\n    \"vat\": 0.5,\n    \"stockable\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Product By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/products/1"
+					},
+					"response": [
+						{
+							"name": "Delete Product By ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/products/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 10:13:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Product deleted successfully"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Stock",
+			"item": [
+				{
+					"name": "Create Stock",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"productId\": 4,\r\n        \"quantity\": 150,\r\n        \"updatedAt\": \"2023-07-02T15:20:18\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/stocks"
+					},
+					"response": [
+						{
+							"name": "Create Stock",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \r\n        \"productId\": 3,\r\n        \"quantity\": 100,\r\n        \"updatedAt\": \"2022-05-02T15:20:18\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/stocks"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 10:20:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"productId\": 3,\n    \"quantity\": 100,\n    \"updatedAt\": \"2023-07-02T13:20:57.9579133\"\n}"
+						},
+						{
+							"name": "Create Stock",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \r\n        \"productId\": 4,\r\n        \"quantity\": 150,\r\n        \"updatedAt\": \"2023-07-02T15:20:18\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/stocks"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 10:25:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"productId\": 4,\n    \"quantity\": 150,\n    \"updatedAt\": \"2023-07-02T13:25:54.9473946\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Stocks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/stocks"
+					},
+					"response": [
+						{
+							"name": "Get All Stocks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/stocks"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 10:21:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"productId\": 2,\n        \"quantity\": 50,\n        \"updatedAt\": \"2023-07-02T15:26:28\"\n    },\n    {\n        \"id\": 3,\n        \"productId\": 3,\n        \"quantity\": 100,\n        \"updatedAt\": \"2023-07-02T13:20:58\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Stock By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/stocks/3"
+					},
+					"response": [
+						{
+							"name": "Get Stock By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/v1/stocks/3"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 10:21:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"productId\": 3,\n    \"quantity\": 100,\n    \"updatedAt\": \"2023-07-02T13:20:58\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Stock By ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"productId\": 2,\r\n    \"quantity\": 160,\r\n    \"updatedAt\": \"2023-07-02T15:26:28\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/stocks/2"
+					},
+					"response": [
+						{
+							"name": "Update Stock By ID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n    \"productId\": 2,\r\n    \"quantity\": 160,\r\n    \"updatedAt\": \"2023-07-02T15:26:28\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/v1/stocks/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 10:23:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"productId\": 2,\n    \"quantity\": 160,\n    \"updatedAt\": \"2023-07-02T13:23:52.2051282\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Stock By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8080/api/v1/stocks/4"
+					},
+					"response": [
+						{
+							"name": "Delete Stock By ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYWplZGJhcWFAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODgyOTAxODcsImV4cCI6MTY4ODg5NDk4N30.4r4o6RfHBxTQVBTWjDfm6ZrGNCERlfLrNGU35xEhgvWLeq80yoZcv1MuugrMf8hMzI6226UOrsqRDqGPSOFf_Q",
+										"type": "text"
+									}
+								],
+								"url": "http://localhost:8080/api/v1/stocks/4"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jul 2023 10:26:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Stock deleted successfully"
+						}
+					]
+				}
+			]
+		}
+	]
+}
