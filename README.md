@@ -9,7 +9,7 @@ a.	How to build the application.
 
 b.	How to create and run the docker image.
 
-1) create Dockerfile in the root of project.
+1) create Dockerfile  in the root directory of your Spring Boot application
 
 2) add tag finalName in pom.xml name is spring-boot-docker
 
