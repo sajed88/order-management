@@ -1,7 +1,5 @@
 # order-management
 a.	How to build the application.
-1) create spring initializr and add dependencies
-2) create p
 
 
 
