@@ -29,6 +29,11 @@ Use JWT (JSON Web Tokens) for authentication and authorization.
 
 Integrate Swagger documentation to document and expose the APIs to users.
 
+5)Postman Collection:
+
+Create a Postman collection to test the APIs for each resource method.
+
+Include all the necessary request URLs, headers, request bodies, and expected responses.
 
 
 
