@@ -7,6 +7,20 @@ a.	How to build the application.
 
 Implement the business logic for managing the entities, including CRUD operations, entity relations, and any additional business rules.
 
+2)Implement Entity Relations:
+
+Based on the database diagram, define and implement the necessary relationships between entities using JPA annotations such as @OneToMany, @ManyToMany.
+
+Ensure the relationships are properly managed and that the database schema matches the desired structure.
+
+3)Best Practices and Constraints:
+
+Follow best practices for software development, including modular and reusable code, separation of concerns, and error handling.
+
+Apply constraints and validations on input data to ensure data integrity and consistency.
+
+Implement exception handling to gracefully handle errors and provide meaningful error messages.
+
 
 
 
