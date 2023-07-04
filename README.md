@@ -1,6 +1,13 @@
 # order-management
 a.	How to build the application.
 
+1) Backend Implementation:
+ Implement the necessary entities, repositories, services, and controllers based on the database diagram.
+Implement the business logic for managing the entities, including CRUD operations, entity relations, and any additional business rules.
+
+
+
+
 
 
 
