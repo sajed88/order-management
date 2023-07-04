@@ -21,10 +21,18 @@ Apply constraints and validations on input data to ensure data integrity and con
 
 Implement exception handling to gracefully handle errors and provide meaningful error messages.
 
+4)Secure APIs and Use Swagger Documentation:
+
+Implement a signup API and authentication mechanism to secure the APIs.
+
+Use JWT (JSON Web Tokens) for authentication and authorization.
+
+Integrate Swagger documentation to document and expose the APIs to users.
 
 
 
 
+-----------------------------------------------------------------------------------------------------------------------
 
 
 
